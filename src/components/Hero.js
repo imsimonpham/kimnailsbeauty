@@ -20,6 +20,9 @@ const useStyles = makeStyles((theme) => {
       height: "100%",
       objectFit: "cover",
       pointerEvents: "none",
+      "&::-webkit-media-controls": {
+        display: "none",
+      },
     },
     heroTextBox: {
       position: "absolute",
@@ -114,14 +117,7 @@ const Hero = () => {
     <>
       {" "}
       <Box className={classes.container}>
-        <video
-          controls={false}
-          playsinline
-          autoPlay
-          loop
-          muted
-          className={classes.vid}
-        >
+        <video playsinline autoPlay loop muted className={classes.vid}>
           <source src={vid} type="video/mp4" />
         </video>
         <Box className={classes.heroTextBox}>
