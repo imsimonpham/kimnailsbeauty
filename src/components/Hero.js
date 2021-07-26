@@ -125,7 +125,11 @@ const Hero = () => {
             Life is too short to NOT wear beautiful nails
           </Typography>
           <Box className={classes.btnBox}>
-            <ButtonOne primary="true" to="/">
+            <ButtonOne
+              primary="true"
+              target="_blank"
+              href="https://kimnailsbeauty.setmore.com/"
+            >
               Book appointment
             </ButtonOne>
             <ButtonOne to="/services">View Service Menu</ButtonOne>
