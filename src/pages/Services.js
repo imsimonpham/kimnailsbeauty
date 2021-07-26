@@ -102,6 +102,7 @@ const useStyles = makeStyles((theme) => {
       background: `${Colors.primary}`,
       fontSize: "0.9rem",
       padding: "0.8rem 2rem",
+      letterSpacing: "1.2px",
       transition: `all 0.3s ease-in-out`,
       "&:hover": {
         background: `${Colors.lightPrimary}`,
@@ -162,7 +163,13 @@ const Services = () => {
             );
           })}
         </div>
-        <Button className={classes.btn}>Book appointment</Button>
+        <Button
+          target="_blank"
+          href="https://kimnailsbeauty.setmore.com/"
+          className={classes.btn}
+        >
+          Book appointment
+        </Button>
       </Box>
       <Typography
         variant="h4"

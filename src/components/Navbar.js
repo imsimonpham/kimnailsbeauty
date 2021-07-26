@@ -254,6 +254,8 @@ const Navbar = (props) => {
         <Button
           style={location.pathname === "/" ? style.textColor : style.textColor2}
           className={classes.btnBorderLess}
+          target="_blank"
+          href="https://kimnailsbeauty.setmore.com/"
         >
           Book appointment
         </Button>
