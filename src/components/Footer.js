@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => {
       flexDirection: "column",
     },
     footerTop: {
-      height: "250px",
+      height: "340px",
       padding: "3rem 2rem 2rem 2rem",
       background: `${Colors.lightPrimary}`,
       display: "flex",
@@ -82,12 +82,14 @@ const useStyles = makeStyles((theme) => {
       fontWeight: "600",
       color: `${Colors.secondary}`,
       fontFamily: ["Italiana", "serif"].join(","),
-      letterSpacing: "1.5px",
+      letterSpacing: "1.2px",
+      fontSize: "0.9rem",
+      textAlign: "center",
     },
     brandNameText: {
       color: `${Colors.dark}`,
       fontWeight: "700",
-      fontSize: "1.2rem",
+      fontSize: "1rem",
     },
     socialMedia: {
       display: "flex",

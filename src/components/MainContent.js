@@ -18,6 +18,7 @@ const useStyles = makeStyles((theme) => {
       display: "flex",
       justifyContent: "center",
       alignItems: "center",
+      textAlign: "center",
       [theme.breakpoints.down("xs")]: {
         height: "150px",
       },
@@ -82,9 +83,6 @@ const useStyles = makeStyles((theme) => {
     },
     btn: {
       letterSpacing: "2px",
-      [theme.breakpoints.down("xs")]: {
-        width: "35px",
-      },
     },
   };
 });
@@ -95,7 +93,7 @@ const MainContent = () => {
     <Box className={classes.container}>
       <Box className={classes.sloganContainer}>
         <Typography variant="h4" component="h1">
-          - We Have Skills You Will Love -
+          We Have Skills You Will Love
         </Typography>
       </Box>
       <Box className={classes.card}>
@@ -123,7 +121,7 @@ const MainContent = () => {
       </Box>
       <Box className={clsx(classes.sloganContainer, classes.secondSlogan)}>
         <Typography variant="h4" component="h1">
-          - Give Your Nails A Sweet Treat -
+          Give Your Nails A Sweet Treat
         </Typography>
       </Box>
       <Box className={clsx(classes.card, classes.reverse)}>
@@ -151,7 +149,7 @@ const MainContent = () => {
       </Box>
       <Box className={classes.sloganContainer}>
         <Typography variant="h4" component="h1">
-          - Feel Elegant -
+          Feel Elegant
         </Typography>
       </Box>
     </Box>

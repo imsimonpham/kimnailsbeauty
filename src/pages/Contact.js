@@ -29,12 +29,16 @@ const useStyles = makeStyles((theme) => {
     textBox: {
       position: "absolute",
       textAlign: "center",
-
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
       "& p": {
         fontSize: "1.4rem",
         letterSpacing: "1.5px",
         fontWeight: "300",
-        marginBottom: "0",
+        marginBottom: "0 auto",
+        maxWidth: "80%",
+        textAlign: "center",
         [theme.breakpoints.down("xs")]: {
           fontSize: "1rem",
         },
@@ -90,7 +94,8 @@ const useStyles = makeStyles((theme) => {
         outline: "none",
         fontFamily: ["Roboto", "sans-serif"].join(","),
         fontSize: "1dfdfnrem",
-
+        border: `1px solid ${Colors.secondary}`,
+        borderRadius: "0",
         "&::placeholder": {
           fontSize: "0.9rem",
           color: `${Colors.dark}`,
@@ -103,6 +108,8 @@ const useStyles = makeStyles((theme) => {
         width: "100%",
         height: "150px",
         padding: "10px",
+        border: `1px solid ${Colors.secondary}`,
+        borderRadius: "0",
         "&::placeholder": {
           fontSize: "1rem",
           color: `${Colors.dark}`,

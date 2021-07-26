@@ -9,6 +9,7 @@ import Footer from "./components/Footer";
 import Services from "./pages/Services";
 import Contact from "./pages/Contact";
 import GlobalStyle from "./globalStyles";
+import ScrollToTop from "./components/ScrollToTop";
 
 const theme = createTheme({
   html: {
@@ -37,6 +38,7 @@ function App({ props }) {
 
   return (
     <ThemeProvider theme={theme}>
+      <ScrollToTop />
       <GlobalStyle />
       <Navbar openDrawer={openDrawer} setOpenDrawer={setOpenDrawer} />
       <Switch>

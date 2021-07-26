@@ -11,11 +11,15 @@ const useStyles = makeStyles((theme) => {
       height: "750px",
       position: "relative",
       color: `${Colors.light}`,
+      [theme.breakpoints.down("sm")]: {
+        height: "830px",
+      },
     },
     vid: {
       width: "100%",
       height: "100%",
       objectFit: "cover",
+      pointerEvents: "none",
     },
     heroTextBox: {
       position: "absolute",
@@ -37,7 +41,7 @@ const useStyles = makeStyles((theme) => {
       marginBottom: "3rem",
       [theme.breakpoints.down("sm")]: {
         fontSize: "1.7rem",
-        margin: "6rem auto 3rem auto",
+        margin: "10rem auto 3rem auto",
         paddingLeft: "1rem",
         paddingRightL: "1rem",
       },
@@ -45,7 +49,7 @@ const useStyles = makeStyles((theme) => {
     },
     btnBox: {
       display: "flex",
-      marginBottom: "6rem",
+      marginBottom: "4rem",
       "& :first-child": {
         marginRight: "2rem",
       },
@@ -53,7 +57,7 @@ const useStyles = makeStyles((theme) => {
         flexDirection: "column",
         "& :first-child": {
           marginRight: "0",
-          marginBottom: "2rem",
+          marginBottom: "1.5rem",
         },
       },
     },
