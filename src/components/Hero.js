@@ -114,7 +114,14 @@ const Hero = () => {
     <>
       {" "}
       <Box className={classes.container}>
-        <video controls={false} autoPlay loop muted className={classes.vid}>
+        <video
+          controls={false}
+          playsinline
+          autoPlay
+          loop
+          muted
+          className={classes.vid}
+        >
           <source src={vid} type="video/mp4" />
         </video>
         <Box className={classes.heroTextBox}>
