@@ -125,7 +125,7 @@ const DrawerMenu = (props) => {
               </a>
               <a
                 rel="noreferrer"
-                href="https://www.facebook.com/kimnailsbeauty2"
+                href="https://www.instagram.com/kim.beauty.no/?hl=vi"
                 target="_blank"
                 className={classes.linkRemoveDefault}
                 onClick={() => {
@@ -136,7 +136,7 @@ const DrawerMenu = (props) => {
               </a>
               <a
                 rel="noreferrer"
-                href="https://www.facebook.com/kimnailsbeauty2"
+                href="https://www.tiktok.com/@kim_nails_beauty?"
                 target="_blank"
                 className={classes.linkRemoveDefault}
                 onClick={() => {

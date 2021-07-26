@@ -116,7 +116,7 @@ const useStyles = makeStyles((theme) => {
         height: "100%",
         width: "100%",
         objectFit: "cover",
-        // border: `5px solid ${Colors.grey}`,
+        cursor: "pointer",
       },
     },
     gridItem: {

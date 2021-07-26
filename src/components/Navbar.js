@@ -227,7 +227,7 @@ const Navbar = (props) => {
           </a>
           <a
             rel="noreferrer"
-            href="https://www.instagram.com/kim.beauty.no"
+            href="https://www.tiktok.com/@kim_nails_beauty?"
             target="_blank"
             className={classes.linkRemoveDefault}
           >
