@@ -1,8 +1,8 @@
-import { Box, makeStyles, Typography } from "@material-ui/core";
+import { Box, makeStyles, Typography, Button } from "@material-ui/core";
 import React from "react";
 import { Colors } from "../data/Variables";
 import vid from "../video/nails_bg.mp4";
-import { ButtonOne } from "./MyButtons";
+import { ButtonThree, ButtonOne } from "./MyButtons";
 
 const useStyles = makeStyles((theme) => {
   return {
@@ -63,6 +63,10 @@ const useStyles = makeStyles((theme) => {
           marginBottom: "1.5rem",
         },
       },
+    },
+    btn1: { letterSpacing: "1.2px" },
+    btn2: {
+      letterSpacing: "1.2px",
     },
     contactBox: {
       display: "flex",
@@ -125,14 +129,17 @@ const Hero = () => {
             Life is too short to NOT wear beautiful nails
           </Typography>
           <Box className={classes.btnBox}>
-            <ButtonOne
+            <ButtonThree
               primary="true"
               target="_blank"
               href="https://kimnailsbeauty.setmore.com/"
+              className={classes.btn1}
             >
               Book appointment
+            </ButtonThree>
+            <ButtonOne to="/services" className={classes.btn2}>
+              View Service Menu
             </ButtonOne>
-            <ButtonOne to="/services">View Service Menu</ButtonOne>
           </Box>
           <Box className={classes.contactBox}>
             <Box className={classes.contact}>

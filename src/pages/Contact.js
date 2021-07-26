@@ -273,8 +273,8 @@ const Contact = () => {
           }}
         >
           <div className={clsx(classes.formControl, classes.infoContainer)}>
-            <input name="name" type="text" placeholder="Name *" />
-            <input name="email" type="email" placeholder="Email *" />
+            <input name="name" required type="text" placeholder="Name *" />
+            <input name="email" required type="email" placeholder="Email *" />
             <input name="phone number" type="text" placeholder="Phone " />
           </div>
 
@@ -283,7 +283,7 @@ const Contact = () => {
           </div>
 
           <div className={classes.formControl}>
-            <textarea name="message" placeholder="Message *" />
+            <textarea name="message" required placeholder="Message *" />
           </div>
           <div className={classes.btnContainer}>
             <ButtonTwo type="submit" className={classes.btn}>
