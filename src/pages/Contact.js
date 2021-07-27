@@ -223,10 +223,10 @@ const Contact = () => {
     e.preventDefault();
     emailjs
       .sendForm(
-        "service_ujavc5a",
-        "template_83vqcx7",
+        "service_4ggfugg",
+        "template_wmuxbid",
         e.target,
-        "user_0wBWq2MZ3ABAr6sJ8SGdI"
+        "user_dn4e2OhxXRlY3UHDirelr"
       )
       .then(
         (result) => {
@@ -248,7 +248,7 @@ const Contact = () => {
         <img src={bg} alt="bg" className={classes.bg} />
         <div className={classes.textBox}>
           <Typography variant="h2" className={classes.bigText}>
-            Contact
+            Kontakt
           </Typography>
           <p>
             We would love hearing from you and moreover meeting you in person
@@ -273,21 +273,21 @@ const Contact = () => {
           }}
         >
           <div className={clsx(classes.formControl, classes.infoContainer)}>
-            <input name="name" required type="text" placeholder="Name *" />
-            <input name="email" required type="email" placeholder="Email *" />
-            <input name="phone number" type="text" placeholder="Phone " />
+            <input name="name" required type="text" placeholder="Navn *" />
+            <input name="email" required type="email" placeholder="E-post *" />
+            <input name="phone number" type="text" placeholder="Telefonen " />
           </div>
 
           <div className={clsx(classes.formControl, classes.subject)}>
-            <input type="text" placeholder="Subject" />
+            <input type="text" placeholder="Emne" name="subject" />
           </div>
 
           <div className={classes.formControl}>
-            <textarea name="message" required placeholder="Message *" />
+            <textarea name="message" required placeholder="Beskjed *" />
           </div>
           <div className={classes.btnContainer}>
             <ButtonTwo type="submit" className={classes.btn}>
-              Send Message
+              Sende Melding
             </ButtonTwo>
           </div>
         </form>

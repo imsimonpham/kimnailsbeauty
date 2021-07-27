@@ -32,7 +32,7 @@ const useStyles = makeStyles((theme) => {
       },
     },
     footerTopItem: {
-      maxWidth: "200px",
+      maxWidth: "230px",
       height: "230px",
       display: "flex",
       flexDirection: "column",
@@ -115,32 +115,32 @@ const Footer = () => {
         <Box className={classes.footerTopItem}>
           <PhoneIcon className={classes.iconLg} />
           <Typography variant="h6" component="h3" className={classes.title}>
-            Contacts
+            Kontakt
           </Typography>
-          <p>Tel: 455.403.55</p>
+          <p>Mob: 455.403.55</p>
 
           <Link
             to="/contact"
             className={clsx(classes.linkRemoveDefault, classes.contactUs)}
           >
-            <p>Contact Us</p>
+            <p>Kontakt Oss</p>
           </Link>
         </Box>
         <Box className={classes.footerTopItem}>
           <ClockIcon className={classes.iconLg} />
           <Typography variant="h6" component="h3" className={classes.title}>
-            Hours
+            Åpningstider
           </Typography>
 
-          <p component="p">Mon to Fri: 10:00 - 18:00</p>
-          <p component="p">Sat: 10:00 - 16:00</p>
-          <p component="p">Sun: CLOSED</p>
+          <p>Mandag to Fredag: 10:00 - 18:00</p>
+          <p>Lørdag: 10:00 - 16:00</p>
+          <p>Søndag: STENGT</p>
           <Box className={classes.socialMedia}></Box>
         </Box>
         <Box className={classes.footerTopItem}>
           <LocationIcon className={classes.iconLg} />
           <Typography variant="h6" component="h3" className={classes.title}>
-            Location
+            Adresse
           </Typography>
           <p>Prinsensgate 6 1530 Moss, Norway</p>
           <Box className={classes.socialMedia}></Box>

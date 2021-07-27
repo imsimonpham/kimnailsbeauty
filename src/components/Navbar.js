@@ -257,7 +257,7 @@ const Navbar = (props) => {
           target="_blank"
           href="https://kimnailsbeauty.setmore.com/"
         >
-          Book appointment
+          Bestill avtale
         </Button>
         <MenuIcon
           onClick={() => {

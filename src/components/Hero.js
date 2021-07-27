@@ -1,4 +1,4 @@
-import { Box, makeStyles, Typography, Button } from "@material-ui/core";
+import { Box, makeStyles, Typography } from "@material-ui/core";
 import React from "react";
 import { Colors } from "../data/Variables";
 import vid from "../video/nails_bg.mp4";
@@ -64,10 +64,8 @@ const useStyles = makeStyles((theme) => {
         },
       },
     },
-    btn1: { letterSpacing: "1.2px" },
-    btn2: {
-      letterSpacing: "1.2px",
-    },
+    btn: { letterSpacing: "1.2px", width: "170px" },
+
     contactBox: {
       display: "flex",
       justifyContent: "center",
@@ -98,6 +96,7 @@ const useStyles = makeStyles((theme) => {
     contact: {
       "& h6": {
         marginBottom: "1rem",
+        textTransform: "uppercase",
       },
       "& p": {
         fontWeight: "400",
@@ -133,27 +132,27 @@ const Hero = () => {
               primary="true"
               target="_blank"
               href="https://kimnailsbeauty.setmore.com/"
-              className={classes.btn1}
+              className={classes.btn}
             >
-              Book appointment
+              Bestill avtale
             </ButtonThree>
-            <ButtonOne to="/services" className={classes.btn2}>
-              View Service Menu
+            <ButtonOne to="/services" className={classes.btn}>
+              Servicemeny
             </ButtonOne>
           </Box>
           <Box className={classes.contactBox}>
             <Box className={classes.contact}>
-              <Typography variant="h6">CONTACT</Typography>
-              <p>Tel: 455.043.55</p>
+              <Typography variant="h6">Kontakt</Typography>
+              <p>Mob: 455.043.55</p>
             </Box>
             <Box className={classes.contact}>
-              <Typography variant="h6">HOURS</Typography>
-              <p>Mon to Fri: 10:00 - 18:00</p>
-              <p>Sat: 10:00 - 16:00</p>
-              <p>Sun: CLOSED</p>
+              <Typography variant="h6">Åpningstider</Typography>
+              <p>Mandag to Fredag: 10:00 - 18:00</p>
+              <p>Lørdag: 10:00 - 16:00</p>
+              <p>Søndag: STENGT</p>
             </Box>
             <Box className={classes.contact}>
-              <Typography variant="h6">LOCATION</Typography>
+              <Typography variant="h6">Adresse</Typography>
               <p>Prinsensgate 6 1530 Moss, Norway</p>
             </Box>
           </Box>

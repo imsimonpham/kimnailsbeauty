@@ -101,7 +101,8 @@ const MainContent = () => {
           <img src={demo1} alt="demo pic" />
         </Box>
         <Box className={classes.textCointainer}>
-          <h1>About Us</h1>
+          <h1>Om Oss</h1>
+
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores
             excepturi animi unde libero. Odio quaerat incidunt quasi animi
@@ -115,7 +116,7 @@ const MainContent = () => {
             accusamus eius quibusdam rerum.
           </p>
           <ButtonOne to="/contact" className={classes.btn}>
-            Contact Us
+            kontakt oss
           </ButtonOne>
         </Box>
       </Box>
@@ -140,7 +141,7 @@ const MainContent = () => {
             accusamus eius quibusdam rerum.
           </p>
           <ButtonOne to="/services" className={classes.btn}>
-            Learn More
+            semer
           </ButtonOne>
         </Box>
         <Box className={classes.imgContainer}>

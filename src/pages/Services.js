@@ -2,10 +2,15 @@ import React from "react";
 import { Box, makeStyles, Typography, Button, Grid } from "@material-ui/core";
 import { Colors } from "../data/Variables";
 import bg from "../img/demo/8.png";
-import { PricingData } from "../data/PricingData";
 import { GalleryData } from "../data/Gallery";
 import clsx from "clsx";
 import { SRLWrapper } from "simple-react-lightbox";
+import { FiPlus } from "react-icons/fi";
+import { ServiceList } from "../data/PricingData";
+
+import Accordion from "@material-ui/core/Accordion";
+import AccordionSummary from "@material-ui/core/AccordionSummary";
+import AccordionDetails from "@material-ui/core/AccordionDetails";
 
 const useStyles = makeStyles((theme) => {
   return {
@@ -29,12 +34,15 @@ const useStyles = makeStyles((theme) => {
     textBox: {
       position: "absolute",
       textAlign: "center",
-
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
       "& p": {
         fontSize: "1.4rem",
         letterSpacing: "1.5px",
         fontWeight: "300",
-        marginBottom: "0",
+        marginBottom: "0 auto",
+        textAlign: "center",
         [theme.breakpoints.down("xs")]: {
           fontSize: "1rem",
         },
@@ -50,7 +58,7 @@ const useStyles = makeStyles((theme) => {
     },
 
     pricingSection: {
-      height: "800px",
+      minHeight: "800px",
       padding: "2rem",
       display: "flex",
       flexDirection: "column",
@@ -60,7 +68,7 @@ const useStyles = makeStyles((theme) => {
     titleContainer: {
       width: "50%",
       textAlign: "center",
-      marginBottom: "2rem",
+      margin: "4rem 0",
       [theme.breakpoints.down("xs")]: {
         width: "100%",
       },
@@ -76,8 +84,8 @@ const useStyles = makeStyles((theme) => {
     },
     priceListContainer: {
       width: "70%",
-      height: "auto",
       fontWeight: "500",
+      position: "relative",
       [theme.breakpoints.down("xs")]: {
         width: "100%",
       },
@@ -88,17 +96,42 @@ const useStyles = makeStyles((theme) => {
         borderBottom: `1px solid ${Colors.grey}`,
       },
     },
-    service: {
+
+    root: {
+      width: "100%",
+      position: "relative",
+    },
+    serviceTiltle: {},
+    singleServiceContainer: {
+      width: "100%",
+      height: "auto",
+      display: "flex",
+      flexDirection: "column",
+    },
+
+    plusIcon: {
+      fontSize: "1.4rem",
+    },
+    singleService: {
       display: "flex",
       alignItems: "center",
       justifyContent: "space-between",
-      padding: "1.5rem 0 ",
-      "& > p": {
+      color: `${Colors.secondary}`,
+      fontWeight: "400",
+      marginBottom: "1rem",
+
+      "& p": {
         margin: "0",
       },
+
+      "& p:nth-child(2)": {
+        textAlign: "left",
+        width: "50px",
+      },
     },
+
     btn: {
-      marginTop: "4rem",
+      margin: "4rem 0rem",
       background: `${Colors.primary}`,
       fontSize: "0.9rem",
       padding: "0.8rem 2rem",
@@ -120,6 +153,7 @@ const useStyles = makeStyles((theme) => {
         cursor: "pointer",
       },
     },
+
     gridItem: {
       width: "300px",
       height: "300px",
@@ -132,43 +166,62 @@ const useStyles = makeStyles((theme) => {
 });
 const Services = () => {
   const classes = useStyles();
+
   return (
     <>
       <Box className={classes.container}>
         <img src={bg} alt="bg" className={classes.bg} />
         <div className={classes.textBox}>
           <Typography variant="h2" className={classes.bigText}>
-            Services
+            Tjenester
           </Typography>
-          <p>Come, Relax, and Enjoy.</p>
+          <p>Kom, slapp av og nyt.</p>
         </div>
       </Box>
       <Box className={classes.pricingSection}>
         <div className={classes.titleContainer}>
           <Typography variant="h4" className={classes.title}>
-            Service Menu
+            Servicemeny
           </Typography>
           <p className={classes.subtitle}>
             Get your nails done for great mood. Simple pleasures can make your
             week, not just day.
           </p>
         </div>
-        <div className={classes.priceListContainer}>
-          {PricingData.map((item, i) => {
+
+        <Box className={classes.priceListContainer}>
+          {ServiceList.map((item, i) => {
             return (
-              <div key={i} className={classes.service}>
-                <p>{item.name}</p>
-                <p>{item.price}</p>
-              </div>
+              <Accordion className={classes.root} elevation={0} key={i}>
+                <AccordionSummary
+                  expandIcon={<FiPlus />}
+                  aria-controls="panel1a-content"
+                  id="panel1a-header"
+                  className={classes.serviceTiltle}
+                >
+                  {item.title}
+                </AccordionSummary>
+                <AccordionDetails className={classes.singleServiceContainer}>
+                  {item.content.map((single, index) => {
+                    return (
+                      <div className={classes.singleService} key={index}>
+                        <p>{single.name}</p>
+                        <p>{single.price}</p>
+                      </div>
+                    );
+                  })}
+                </AccordionDetails>
+              </Accordion>
             );
           })}
-        </div>
+        </Box>
+
         <Button
           target="_blank"
           href="https://kimnailsbeauty.setmore.com/"
           className={classes.btn}
         >
-          Book appointment
+          Bestill avtale
         </Button>
       </Box>
       <Typography
