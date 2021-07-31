@@ -39,7 +39,7 @@ const useStyles = makeStyles((theme) => {
     },
 
     card: {
-      height: "650px",
+      height: "700px",
       width: "100%",
       display: "flex",
       [theme.breakpoints.down("sm")]: {
