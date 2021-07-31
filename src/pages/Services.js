@@ -114,7 +114,7 @@ const useStyles = makeStyles((theme) => {
     },
     singleService: {
       display: "flex",
-      alignItems: "center",
+      alignItems: "flex-start",
       justifyContent: "space-between",
       color: `${Colors.secondary}`,
       fontWeight: "400",
@@ -126,7 +126,8 @@ const useStyles = makeStyles((theme) => {
 
       "& p:nth-child(2)": {
         textAlign: "left",
-        width: "50px",
+        minWidth: "50px",
+        marginLeft: "5px",
       },
     },
 
@@ -161,6 +162,7 @@ const useStyles = makeStyles((theme) => {
     titleOutside: {
       marginBottom: "3rem ",
       textAlign: "center",
+      textTransform: "capitalize",
     },
   };
 });
@@ -184,8 +186,8 @@ const Services = () => {
             Servicemeny
           </Typography>
           <p className={classes.subtitle}>
-            Get your nails done for great mood. Simple pleasures can make your
-            week, not just day.
+            Få neglene dine gjort for godt humør. Enkle gleder kan gjøre uken
+            din, ikke bare dagen.
           </p>
         </div>
 
@@ -228,7 +230,7 @@ const Services = () => {
         variant="h4"
         className={clsx(classes.title, classes.titleOutside)}
       >
-        Your Beauty Is Our Profession
+        Din skjønnhet er vårt yrke
       </Typography>
 
       <SRLWrapper>

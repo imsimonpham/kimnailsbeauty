@@ -125,7 +125,7 @@ const Hero = () => {
         </video>
         <Box className={classes.heroTextBox}>
           <Typography variant="h3" className={classes.motto}>
-            Life is too short to NOT wear beautiful nails
+            Livet er for kort til å ikke bære vakre negler
           </Typography>
           <Box className={classes.btnBox}>
             <ButtonThree

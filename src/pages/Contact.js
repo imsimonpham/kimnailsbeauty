@@ -72,6 +72,7 @@ const useStyles = makeStyles((theme) => {
       fontFamily: ["Italiana", "serif"].join(","),
       fontWeight: "700",
       letterSpacing: "4px",
+      textTransform: "capitalize",
     },
     subtitle: {
       letterSpacing: "1.5px",
@@ -250,19 +251,17 @@ const Contact = () => {
           <Typography variant="h2" className={classes.bigText}>
             Kontakt
           </Typography>
-          <p>
-            We would love hearing from you and moreover meeting you in person
-          </p>
+          <p>Vi vil gjerne høre fra deg og dessuten møte deg personlig</p>
         </div>
       </Box>
       <Box className={classes.formContainer}>
         <div className={classes.titleContainer}>
           <Typography variant="h4" className={classes.title}>
-            Drop Us a Line
+            Send oss en linje
           </Typography>
           <p className={classes.subtitle}>
-            Leave us a message and we will get back to you as soon as possible.
-            We’d love hearing from you.
+            Legg igjen en melding, så kommer vi tilbake til deg så snart som
+            mulig. Vi vil gjerne høre fra deg.
           </p>
         </div>
 

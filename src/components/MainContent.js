@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme) => {
         margin: "0",
         fontFamily: ["Italiana", "serif"].join(","),
         fontWeight: "700",
-
+        textTransform: "capitalize",
         [theme.breakpoints.down("xs")]: {
           fontSize: "1.2rem",
         },
@@ -39,7 +39,7 @@ const useStyles = makeStyles((theme) => {
     },
 
     card: {
-      height: "550px",
+      minHeight: "550px",
       width: "100%",
       display: "flex",
       [theme.breakpoints.down("sm")]: {
@@ -59,6 +59,8 @@ const useStyles = makeStyles((theme) => {
         width: "100%",
         height: "100%",
         objectFit: "cover",
+        //to prevent line-break between img tag and the vest div tag
+        display: "block",
       },
     },
     textCointainer: {
@@ -93,7 +95,7 @@ const MainContent = () => {
     <Box className={classes.container}>
       <Box className={classes.sloganContainer}>
         <Typography variant="h4" component="h1">
-          We Have Skills You Will Love
+          Vi har ferdigheter du vil elske
         </Typography>
       </Box>
       <Box className={classes.card}>
@@ -104,16 +106,18 @@ const MainContent = () => {
           <h1>Om Oss</h1>
 
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores
-            excepturi animi unde libero. Odio quaerat incidunt quasi animi
-            consequatur laboriosam dicta iure sunt quos sapiente veniam,
-            accusamus eius quibusdam rerum.
+            Startet som et lidenskapsprosjekt av en spikerartist som ligger i en
+            liten, men vakker by Moss. Kim Nails Beauty søker å frembringe den
+            indre skjønnheten til alle individer og formidler dem ved hjelp av
+            neglekunst.
           </p>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores
-            excepturi animi unde libero. Odio quaerat incidunt quasi animi
-            consequatur laboriosam dicta iure sunt quos sapiente veniam,
-            accusamus eius quibusdam rerum.
+            Målet vårt er å alltid trives for kundenes tilfredshet, slik at
+            enhver person som forlater døren vår, føler seg godt ivaretatt, godt
+            pleiet og elsket. Vi er sikre på at uansett hvor fantasien tar deg,
+            kan vi alltid følge og oversette de levende bildene til neglene
+            dine. Med tilbakemeldinger fra våre gjester og fortsatt støtte, vil
+            vi vokse videre og fortsette å elske deg og neglene dine.
           </p>
           <ButtonOne to="/contact" className={classes.btn}>
             kontakt oss
@@ -122,23 +126,27 @@ const MainContent = () => {
       </Box>
       <Box className={clsx(classes.sloganContainer, classes.secondSlogan)}>
         <Typography variant="h4" component="h1">
-          Give Your Nails A Sweet Treat
+          Gi neglene en godbit
         </Typography>
       </Box>
       <Box className={clsx(classes.card, classes.reverse)}>
         <Box className={classes.textCointainer}>
-          <h1>Relax! The nail technician is here.</h1>
+          <h1>Slappe av! Spikerteknikeren er her.</h1>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores
-            excepturi animi unde libero. Odio quaerat incidunt quasi animi
-            consequatur laboriosam dicta iure sunt quos sapiente veniam,
-            accusamus eius quibusdam rerum.
+            La ditt indre bli sett gjennom neglene dine. Enten det er en
+            selvtillit eller ditt kreative utsalgssted, er vi her med deg på
+            reisen. Hos Kim Nails Beauty er det vi som gjør mesterverket ditt
+            til virkelighet på neglene dine! Ikke la fantasien din bli hindret,
+            da vi får drømmemanikyren til å ta form foran deg.
           </p>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores
-            excepturi animi unde libero. Odio quaerat incidunt quasi animi
-            consequatur laboriosam dicta iure sunt quos sapiente veniam,
-            accusamus eius quibusdam rerum.
+            Alle fortjener en fin, avslappende manikyr, og vi tror at den beste
+            måten å oppnå det på er gjennom omsorg og engasjement. Hos Kim nails
+            beauty vil våre spikerteknikere gi omsorg bare det beste settet med
+            negler trenger. La neglene dine bli våre også, mens vi behandler deg
+            etter beste evne, og gir deg ingenting annet enn stor tilfredshet,
+            avslapning og stolthet for din glamorøse mani! Måtte alle
+            fingertuppene være et aspekt av ditt sanne potensial
           </p>
           <ButtonOne to="/services" className={classes.btn}>
             semer
@@ -150,7 +158,7 @@ const MainContent = () => {
       </Box>
       <Box className={classes.sloganContainer}>
         <Typography variant="h4" component="h1">
-          Feel Elegant
+          Føl deg elegant
         </Typography>
       </Box>
     </Box>
