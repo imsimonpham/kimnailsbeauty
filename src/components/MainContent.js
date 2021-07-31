@@ -1,7 +1,7 @@
 import React from "react";
 import { makeStyles, Box, Typography } from "@material-ui/core";
-import demo1 from "../img/demo/7.jpg";
-import demo2 from "../img/demo/4.jpg";
+import demo1 from "../img/demo/10.jpg";
+import demo2 from "../img/demo/11.jpg";
 import { Colors } from "../data/Variables";
 import clsx from "clsx";
 import { ButtonOne } from "./MyButtons";
@@ -39,7 +39,7 @@ const useStyles = makeStyles((theme) => {
     },
 
     card: {
-      minHeight: "550px",
+      height: "650px",
       width: "100%",
       display: "flex",
       [theme.breakpoints.down("sm")]: {
