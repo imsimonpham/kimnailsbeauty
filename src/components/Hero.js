@@ -147,7 +147,7 @@ const Hero = () => {
             </Box>
             <Box className={classes.contact}>
               <Typography variant="h6">Åpningstider</Typography>
-              <p>Mandag to Fredag: 10:00 - 18:00</p>
+              <p>Mandag til Fredag: 10:00 - 18:00</p>
               <p>Lørdag: 10:00 - 16:00</p>
               <p>Søndag: STENGT</p>
             </Box>
