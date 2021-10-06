@@ -14,6 +14,7 @@ import vid3 from "../video/vid3.mp4";
 import vid4 from "../video/vid4.mp4";
 import vid5 from "../video/vid5.mp4";
 import vid6 from "../video/vid6.mp4";
+import poster1 from "../img/results/poster1.jfif";
 
 export const GalleryData = [
   { src: img1, alt: "result" },
@@ -28,10 +29,10 @@ export const GalleryData = [
   { src: img10, alt: "result" },
 ];
 export const VideoData = [
-  { src: vid1, alt: "result" },
-  { src: vid2, alt: "result" },
-  { src: vid3, alt: "result" },
-  { src: vid4, alt: "result" },
-  { src: vid5, alt: "result" },
-  { src: vid6, alt: "result" },
+  { src: vid1, poster: poster1, alt: "result" },
+  { src: vid2, poster: poster1, alt: "result" },
+  { src: vid3, poster: poster1, alt: "result" },
+  { src: vid4, poster: poster1, alt: "result" },
+  { src: vid5, poster: poster1, alt: "result" },
+  { src: vid6, poster: poster1, alt: "result" },
 ];

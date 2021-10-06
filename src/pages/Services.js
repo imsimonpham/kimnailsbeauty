@@ -247,14 +247,9 @@ const Services = () => {
           {VideoData.map((item, i) => {
             return (
               <Grid item xs={12} md={4} className={classes.gridItem} key={i}>
-                <video
-                  src={item.src}
-                  type="video/mp4"
-                  alt={item.alt}
-                  controls
-                  preload="true"
-                  playsInline
-                />
+                <video controls poster={item.poster}>
+                  <source src={item.src} type="video/mp4" alt={item.alt} />
+                </video>
               </Grid>
             );
           })}
