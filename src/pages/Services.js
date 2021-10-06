@@ -252,6 +252,7 @@ const Services = () => {
                   type="video/mp4"
                   alt={item.alt}
                   controls
+                  preload="true"
                 />
               </Grid>
             );
