@@ -253,6 +253,7 @@ const Services = () => {
                   alt={item.alt}
                   controls
                   preload="true"
+                  playsInline
                 />
               </Grid>
             );
