@@ -3,6 +3,7 @@ import { Box, makeStyles, Typography, Button, Grid } from "@material-ui/core";
 import { Colors } from "../data/Variables";
 import bg from "../img/demo/8.png";
 import { GalleryData } from "../data/Gallery";
+import { VideoData } from "../data/Gallery";
 import clsx from "clsx";
 import { SRLWrapper } from "simple-react-lightbox";
 import { FiPlus } from "react-icons/fi";
@@ -145,7 +146,7 @@ const useStyles = makeStyles((theme) => {
     },
     gallery: {
       width: "80%",
-      margin: `0 auto 4rem auto`,
+      margin: `0 auto`,
       maxWidth: "1000px",
       "& img": {
         height: "100%",
@@ -153,7 +154,15 @@ const useStyles = makeStyles((theme) => {
         objectFit: "cover",
         cursor: "pointer",
       },
+      "& video": {
+        height: "100%",
+        width: "100%",
+        objectFit: "cover",
+        cursor: "pointer",
+      },
     },
+
+    gallery2: { marginBottom: "4rem" },
 
     gridItem: {
       width: "300px",
@@ -235,6 +244,24 @@ const Services = () => {
 
       <SRLWrapper>
         <Grid container spacing={3} className={classes.gallery}>
+          {VideoData.map((item, i) => {
+            return (
+              <Grid item xs={12} md={4} className={classes.gridItem} key={i}>
+                <video
+                  src={item.src}
+                  type="video/mp4"
+                  alt={item.alt}
+                  controls
+                />
+              </Grid>
+            );
+          })}
+        </Grid>
+        <Grid
+          container
+          spacing={3}
+          className={[classes.gallery, classes.gallery2]}
+        >
           {GalleryData.map((item, i) => {
             return (
               <Grid item xs={12} md={4} className={classes.gridItem} key={i}>

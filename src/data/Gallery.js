@@ -8,6 +8,12 @@ import img7 from "../img/results/7.jpg";
 import img8 from "../img/results/8.jpg";
 import img9 from "../img/results/9.jpg";
 import img10 from "../img/results/10.jpg";
+import vid1 from "../video/vid1.mp4";
+import vid2 from "../video/vid2.mp4";
+import vid3 from "../video/vid3.mp4";
+import vid4 from "../video/vid4.mp4";
+import vid5 from "../video/vid5.mp4";
+import vid6 from "../video/vid6.mp4";
 
 export const GalleryData = [
   { src: img1, alt: "result" },
@@ -20,4 +26,12 @@ export const GalleryData = [
   { src: img8, alt: "result" },
   { src: img9, alt: "result" },
   { src: img10, alt: "result" },
+];
+export const VideoData = [
+  { src: vid1, alt: "result" },
+  { src: vid2, alt: "result" },
+  { src: vid3, alt: "result" },
+  { src: vid4, alt: "result" },
+  { src: vid5, alt: "result" },
+  { src: vid6, alt: "result" },
 ];
